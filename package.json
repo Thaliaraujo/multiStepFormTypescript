@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,6 +16,7 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
+    "@types/styled-components": "^5.1.29",
     "axios": "^1.6.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
