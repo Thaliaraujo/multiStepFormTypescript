@@ -1,21 +1,29 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import logo from "./imageLogo/logoSmall.png";
 
 
 const Logotipo = styled.h1`
-    padding-left: .5rem;
     font-size: 1.2rem;
     font-weight: 600;
-    &::before {
-        content: url(/imageLogo/logo.png);
-        margin-right: .5rem;
-    }  
+    color: var(--neutral-800);
+
+    padding-left: 2rem;
+    margin-right: .5rem;
+
+    background-image: url(${logo});
+    background-repeat: no-repeat;
+    background-position: left;
+
     span {
-       color: green;
+       color: var(--primary-color);
     }
 `
 
 export const Logo = () => {
     return(
-      <Logotipo>Web<span>Tech</span></Logotipo>
+        <div>
+            <Logotipo>Web<span>Tech</span></Logotipo>
+        </div>
+        
     );
 };
