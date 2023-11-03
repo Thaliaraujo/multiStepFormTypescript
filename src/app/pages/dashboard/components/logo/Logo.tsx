@@ -8,7 +8,7 @@ const Logotipo = styled.h1`
     color: var(--neutral-800);
 
     padding-left: 2rem;
-    margin-right: .5rem;
+    margin: 0 .5rem;
 
     background-image: url(${logo});
     background-repeat: no-repeat;
