@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "./imageLogo/logoSmall.png";
+import logo from "./imageLogo/logo.svg";
 
 
 const Logotipo = styled.h1`
