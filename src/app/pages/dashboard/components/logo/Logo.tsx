@@ -2,7 +2,7 @@ import styled from "styled-components";
 import logo from "./imageLogo/logo.svg";
 
 
-const Logotipo = styled.h1`
+const SLogo = styled.h1`
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--neutral-800);
@@ -22,7 +22,7 @@ const Logotipo = styled.h1`
 export const Logo = () => {
     return(
         <div>
-            <Logotipo>Web<span>Tech</span></Logotipo>
+            <SLogo>Web<span>Tech</span></SLogo>
         </div>
         
     );

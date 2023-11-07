@@ -42,5 +42,11 @@
       "company": "small",
       "id": 6
     }
+  ],
+  "subscription": [
+    {
+      "email": "thalia.araujo@",
+      "id": 1
+    }
   ]
 }
