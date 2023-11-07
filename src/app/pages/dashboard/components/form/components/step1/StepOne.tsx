@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { InputRegister } from "../../../inputRegister/InputRegister";
+import { Input } from "../../../input/Input";
 import { IRegister, RegisterService } from "../../../../../../shared/services/api/register/RegisterService";
 import { ApiException } from "../../../../../../shared/services/api/ApiException";
 
@@ -43,28 +43,28 @@ export const StepOne = () => {
 
     return(
         <form>
-            <InputRegister 
+            <Input 
                 label= "Nome"
                 placeholder="Davi Santos"
                 value= {name}
                 onChange={newValue => setName(newValue)}
             />
 
-            <InputRegister 
+            <Input 
                 label="Email"
                 placeholder="davi.santos@gmail.com" 
                 value={email} 
                 onChange={newValue => setEmail(newValue)}
             />
 
-            <InputRegister 
+            <Input 
                 label="Telefone"
                 placeholder="11909090909" 
                 value={phone} 
                 onChange={newValue => setPhone(newValue)}
             />
 
-            <InputRegister 
+            <Input 
                 label="Empresa"
                 placeholder="Small Tech" 
                 value={company} 

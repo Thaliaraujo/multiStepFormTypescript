@@ -6,7 +6,7 @@ interface IInputRegisterProps{
     onChange: (newvalue: string) => void;
 }
 
-export const InputRegister: React.FC<IInputRegisterProps> = (props) => {
+export const Input: React.FC<IInputRegisterProps> = (props) => {
     return(
         <label>
             <span>{props.label}</span>

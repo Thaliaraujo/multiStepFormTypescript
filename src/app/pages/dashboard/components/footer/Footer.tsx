@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ISubscription, SubscriptionService } from "../../../../shared/services/api/subscription/SubscriptionService";
 import { ApiException } from "../../../../shared/services/api/ApiException";
 
-import { InputRegister } from "../inputRegister/InputRegister";
+import { Input } from "../input/Input";
 import { Logo } from "../logo/Logo";
 import { Paragraphs } from "../paragraphs/Paragraphs";
 
@@ -57,7 +57,7 @@ export const Footer = () => {
 
     return(
         <SFooter>
-            <InputRegister
+            <Input
                 label= ""
                 placeholder="Digite seu e-mail"
                 value= {email}
