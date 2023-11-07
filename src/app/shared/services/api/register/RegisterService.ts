@@ -7,7 +7,8 @@ export interface IRegister {
     name: string;
     email: string;
     phone: number;
-    company: string
+    company: string;
+    teste: string;
 };
 
 

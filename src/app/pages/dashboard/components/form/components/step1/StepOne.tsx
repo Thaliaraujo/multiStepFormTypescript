@@ -1,48 +1,48 @@
 import { useState } from "react";
 import { Input } from "../../../input/Input";
-import { IRegister, RegisterService } from "../../../../../../shared/services/api/register/RegisterService";
-import { ApiException } from "../../../../../../shared/services/api/ApiException";
+// import { IRegister, RegisterService } from "../../../../../../shared/services/api/register/RegisterService";
+// import { ApiException } from "../../../../../../shared/services/api/ApiException";
 
 export const StepOne = () => {
 
-    const [register, setRegister] = useState<IRegister[]>([]);
+    // const [register, setRegister] = useState<IRegister[]>([]);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [company, setCompany] = useState('');
     
-    const handleRegister = () => {
+    // const handleRegister = () => {
         
-        if (name.trim() === '' || email.trim() === '' || phone.trim() === '') {
-            alert('Os campos nome, e-mail e telefone são obrigatórios.');
-            return;
-          };
-        //criando um objeto para enviar dados para RegisterService
-        const dataToCreate: Omit<IRegister, 'id'> = {
-            name: name,
-            email: email,
-            phone: parseFloat(phone), // Converte 'phone' para número
-            company: company,
-        };
+    //     if (name.trim() === '' || email.trim() === '' || phone.trim() === '') {
+    //         alert('Os campos nome, e-mail e telefone são obrigatórios.');
+    //         return;
+    //       };
+    //      //criando um objeto para enviar dados para RegisterService
+    //     const dataToCreate: Omit<IRegister, 'id'> = {
+    //         name: name,
+    //         email: email,
+    //         phone: parseFloat(phone), //Converte 'phone' para número
+    //         company: company,
+    //     };
 
-        // Chama o serviço para criar um novo registro
-        RegisterService.create(dataToCreate)
-        .then((result) => {
-        if (result instanceof ApiException) {
-            alert(result.message);
-        } else {
-            setRegister((oldregister) => [...oldregister, result[0]]);
-            // Limpa os campos após o cadastro
-            setName('');
-            setEmail('');
-            setPhone('');
-            setCompany('');
-        }
-        });
-    };
+    //      // Chama o serviço para criar um novo registro
+    //      RegisterService.create(dataToCreate)
+    //      .then((result) => {
+    //      if (result instanceof ApiException) {
+    //          alert(result.message);
+    //      } else {
+    //          setRegister((oldregister) => [...oldregister, result[0]]);
+    //           //Limpa os campos após o cadastro
+    //          setName('');
+    //          setEmail('');
+    //          setPhone('');
+    //          setCompany('');
+    //      }
+    //      });
+    //  };
 
     return(
-        <form>
+        <div>
             <Input 
                 label= "Nome"
                 placeholder="Davi Santos"
@@ -71,7 +71,7 @@ export const StepOne = () => {
                 onChange={newValue => setCompany(newValue)}
             />
 
-            <button type="button" onClick={handleRegister}>Cadastrar</button>
-        </form>
+            {/* <button type="button" onClick={handleRegister}>Cadastrar</button> */}
+        </div>
     );
 };
