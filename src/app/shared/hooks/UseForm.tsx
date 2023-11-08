@@ -5,7 +5,7 @@ export const UseForm = (steps: React.ReactNode[]) => {
     const [currentStep, setCurrentStep] = useState(0);
 
     function changeStep(i: number, e:  React.SyntheticEvent) {
-       if(e) 
+        if(e) 
         e.preventDefault();
         if(i < 0 || i >= steps.length) return
 

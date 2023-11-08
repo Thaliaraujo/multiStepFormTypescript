@@ -10,7 +10,6 @@ export interface IRegister {
     teste: string;
 };
 
-
 const getAll = async (): Promise<IRegister[] | ApiException> => {
     try {
         const {data} = await Api().get('/register');

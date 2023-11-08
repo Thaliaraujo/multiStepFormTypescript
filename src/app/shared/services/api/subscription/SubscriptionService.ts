@@ -1,12 +1,9 @@
 import { Api } from "../ApiConfig";
 import { ApiException } from "../ApiException";
-
-
 export interface ISubscription {
     id: number;
     email: string;
 };
-
 
 const getAll = async (): Promise<ISubscription[] | ApiException> => {
     try {

@@ -11,15 +11,6 @@ import { StepFour } from "./components/step4/StepFour";
 
 export const Form = () => {
   
-  const formComponents = [
-    <StepOne />,
-    <StepTwo />,
-    <StepThree />,
-    <StepFour />
-  ];
-
-  const {currentStep, currentComponents, changeStep, isFirstStep, isLastStep} = UseForm(formComponents);
-  
   const [register, setRegister] = useState<IRegister[]>([]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -27,19 +18,36 @@ export const Form = () => {
   const [company, setCompany] = useState('');
   const [teste, setTeste] = useState('');
 
+  const formComponents = [
+    <StepOne 
+      name={name}
+      email={email}
+      phone={phone}
+      company={company}
+      onNameChange={setName}
+      onEmailChange={setEmail}
+      onPhoneChange={setPhone}
+      onCompanyChange={setCompany}
+    />,
+    <StepTwo 
+      teste={teste}
+      onTesteChange={setTeste}
+    />,
+    <StepThree />,
+    <StepFour />
+  ];
 
+  const {currentStep, currentComponents, changeStep, isFirstStep, isLastStep} = UseForm(formComponents);
+  
   const handleRegister = () => {
-    if (name.trim() === '' || email.trim() === '' || phone.trim() === '' || company.trim() === '' || teste.trim() === '') {
-      alert('Os campos nome, e-mail e telefone são obrigatórios.');
-      return;
-    };
-     //criando um objeto para enviar dados para RegisterService
+    
+    //criando um objeto para enviar dados para RegisterService
     const dataToCreate: Omit<IRegister, 'id'> = {
-        name: name,
-        email: email,
-        phone: parseFloat(phone), //Converte 'phone' para número
-        company: company,
-        teste: teste
+      name: name,
+      email: email,
+      phone: parseFloat(phone),
+      company: company,
+      teste: teste
     };
 
     // Chama o serviço para criar um novo registro
@@ -49,12 +57,12 @@ export const Form = () => {
         alert(result.message);
       } else {
         setRegister((oldregister) => [...oldregister, result[0]]);
-          setName('');
-          setEmail('');
-          setPhone('');
-          setCompany('');
-          setTeste('');
-      }
+        setName('');
+        setEmail('');
+        setPhone('');
+        setCompany('');
+        setTeste('');
+      };
     });
   };
 

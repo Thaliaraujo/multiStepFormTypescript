@@ -1,41 +1,43 @@
-import { useState } from "react";
 import { Input } from "../../../input/Input";
 
-export const StepOne = () => {
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [company, setCompany] = useState('');
-    
-    return(
+export const StepOne = (props: {
+    name: string,
+    email: string,
+    phone: string,
+    company: string,
+    onNameChange: (value: string) => void,
+    onEmailChange: (value: string) => void,
+    onPhoneChange: (value: string) => void,
+    onCompanyChange: (value: string) => void,
+}) => {
+    return (
         <div>
-            <Input 
-                label= "Nome"
+            <Input
+                label="Nome"
                 placeholder="Davi Santos"
-                value= {name}
-                onChange={newValue => setName(newValue)}
+                value={props.name}
+                onChange={props.onNameChange}
             />
 
-            <Input 
+            <Input
                 label="Email"
-                placeholder="davi.santos@gmail.com" 
-                value={email} 
-                onChange={newValue => setEmail(newValue)}
+                placeholder="davi.santos@gmail.com"
+                value={props.email}
+                onChange={props.onEmailChange}
             />
 
-            <Input 
+            <Input
                 label="Telefone"
-                placeholder="11909090909" 
-                value={phone} 
-                onChange={newValue => setPhone(newValue)}
+                placeholder="11909090909"
+                value={props.phone.toString()}
+                onChange={props.onPhoneChange}     
             />
 
-            <Input 
+            <Input
                 label="Empresa"
-                placeholder="Small Tech" 
-                value={company} 
-                onChange={newValue => setCompany(newValue)}
+                placeholder="Small Tech"
+                value={props.company}
+                onChange={props.onCompanyChange}
             />
         </div>
     );

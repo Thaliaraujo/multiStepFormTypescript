@@ -11,6 +11,7 @@ export const Input: React.FC<IInputRegisterProps> = (props) => {
         <label>
             <span>{props.label}</span>
             <input 
+                required
                 placeholder={props.placeholder}
                 value={props.value}
                 onChange={e => props.onChange(e.target.value)}

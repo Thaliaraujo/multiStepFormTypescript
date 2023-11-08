@@ -1,16 +1,16 @@
-import { useState } from "react";
 import { Input } from "../../../input/Input";
 
-export const StepTwo = () => {
-
-    const [teste, setTeste] = useState('');
+export const StepTwo = (props: {
+    teste: string,
+    onTesteChange: (value: string) => void,
+}) => {
     return(
         <div>
             <Input 
                 label= "test"
                 placeholder="tets"
-                value= {teste}
-                onChange={newValue => setTeste(newValue)}
+                value={props.teste}
+                onChange={props.onTesteChange}
             />
         </div>
     );
