@@ -1,4 +1,3 @@
-
 interface IInputRegisterProps{
     label: string;
     value: string;

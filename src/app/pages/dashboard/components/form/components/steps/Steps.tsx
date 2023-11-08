@@ -1,5 +1,6 @@
 import React from "react";
 import { Stepper, StepLabel, Step} from '@mui/material';
+import styled from "styled-components";
 
 
 const stepStyle = {
@@ -20,13 +21,18 @@ const stepStyle = {
     }
 };
 
+const SSteps = styled.div `
+    display: flex;
+    justify-content: space-around;
+`
+
 interface ISteps {
     currentStep: number;
   }
 
 export const Steps: React.FC<ISteps> = ({ currentStep })=> {
     return (
-        <div>
+        <SSteps>
             <Stepper activeStep={currentStep} sx={stepStyle}>
                 <Step  >
                     <StepLabel />
@@ -41,6 +47,6 @@ export const Steps: React.FC<ISteps> = ({ currentStep })=> {
                     <StepLabel />
                 </Step>
             </Stepper>
-      </div>
+      </SSteps>
     );
 };

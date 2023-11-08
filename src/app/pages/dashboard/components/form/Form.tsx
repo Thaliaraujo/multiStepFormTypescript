@@ -8,6 +8,7 @@ import { StepOne } from "./components/step1/StepOne";
 import { StepTwo } from "./components/step2/StepTwo";
 import { StepThree } from "./components/step3/StepThree";
 import { StepFour } from "./components/step4/StepFour";
+import { ButtonForm, SForm } from "./StylesForm";
 
 export const Form = () => {
   
@@ -67,11 +68,11 @@ export const Form = () => {
   };
 
   return (
-    <div>
+    <SForm>
       <Steps currentStep={currentStep} />
       <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => changeStep(currentStep + 1, e)}>
         <div>{currentComponents}</div>
-        <>
+        <ButtonForm>
           {!isFirstStep && (
             <button
               type='button'
@@ -93,8 +94,8 @@ export const Form = () => {
               Enviar
             </button>
           )}
-        </>
+        </ButtonForm>
       </form>
-    </div>
+    </SForm>
   );
 };

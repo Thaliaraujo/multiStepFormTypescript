@@ -1,4 +1,6 @@
 import { Input } from "../../../input/Input";
+import { Paragraphs } from "../../../paragraphs/Paragraphs";
+import { Titles } from "../../../titles/Titles";
 
 export const StepTwo = (props: {
     teste: string,
@@ -6,6 +8,8 @@ export const StepTwo = (props: {
 }) => {
     return(
         <div>
+            <Titles>Nossos serviços</Titles>
+            <Paragraphs>Selecione os serviços de seu interesse.</Paragraphs>
             <Input 
                 label= "test"
                 placeholder="tets"

@@ -1,4 +1,5 @@
 import { Input } from "../../../input/Input";
+import { Titles } from "../../../titles/Titles";
 
 export const StepOne = (props: {
     name: string,
@@ -11,34 +12,37 @@ export const StepOne = (props: {
     onCompanyChange: (value: string) => void,
 }) => {
     return (
-        <div>
-            <Input
-                label="Nome"
-                placeholder="Davi Santos"
-                value={props.name}
-                onChange={props.onNameChange}
-            />
+        <>
+            <Titles>Dados de Contato</Titles>
+            <div>
+                <Input
+                    label="Nome"
+                    placeholder="Davi Santos"
+                    value={props.name}
+                    onChange={props.onNameChange}
+                />
 
-            <Input
-                label="Email"
-                placeholder="davi.santos@gmail.com"
-                value={props.email}
-                onChange={props.onEmailChange}
-            />
+                <Input
+                    label="Email"
+                    placeholder="davi.santos@gmail.com"
+                    value={props.email}
+                    onChange={props.onEmailChange}
+                />
 
-            <Input
-                label="Telefone"
-                placeholder="11909090909"
-                value={props.phone.toString()}
-                onChange={props.onPhoneChange}     
-            />
+                <Input
+                    label="Telefone"
+                    placeholder="11909090909"
+                    value={props.phone.toString()}
+                    onChange={props.onPhoneChange}     
+                />
 
-            <Input
-                label="Empresa"
-                placeholder="Small Tech"
-                value={props.company}
-                onChange={props.onCompanyChange}
-            />
-        </div>
+                <Input
+                    label="Empresa"
+                    placeholder="Small Tech"
+                    value={props.company}
+                    onChange={props.onCompanyChange}
+                />
+            </div>
+        </>
     );
 };

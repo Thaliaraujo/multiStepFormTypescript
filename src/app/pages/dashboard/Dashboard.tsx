@@ -10,7 +10,9 @@ export const Dashboard = () => {
         <div>
             <Logo />
             <TitleAndParagraph />
-            <Form />
+            <div className='formDashboard'>
+                <Form />
+            </div>
             <Footer />
         </div>
     );
