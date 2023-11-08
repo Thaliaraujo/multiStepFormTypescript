@@ -30,6 +30,9 @@ export const Footer = () => {
     const [subscription, setSubscription] = useState<ISubscription[]>([]);
     const [email, setEmail] = useState('');
 
+    const thanks = "Obrigado por se inscrever na nossa newsletter! Estamos muito felizes em ter você como parte da nossa comunidade. 😊"
+
+
     const handleSubscription = () => {
         
         if (email.trim() === '') {
@@ -51,6 +54,7 @@ export const Footer = () => {
             setSubscription((oldSubscription) => [...oldSubscription, result[0]]);
             // Limpa o campo após o cadastro
             setEmail('');
+            alert(thanks);  
         }
         });
     };

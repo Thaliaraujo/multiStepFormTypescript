@@ -1,7 +1,6 @@
 import { Api } from "../ApiConfig";
 import { ApiException } from "../ApiException";
 
-
 export interface IRegister {
     id: number;
     name: string;
