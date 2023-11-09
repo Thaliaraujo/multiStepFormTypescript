@@ -9,6 +9,7 @@ import { StepTwo } from "./components/step2/StepTwo";
 import { StepThree } from "./components/step3/StepThree";
 import { StepFour } from "./components/step4/StepFour";
 import { ButtonForm, SForm } from "./StylesForm";
+import { Button } from "../button/StylesButton";
 
 export const Form = () => {
   
@@ -74,25 +75,25 @@ export const Form = () => {
         <div>{currentComponents}</div>
         <ButtonForm>
           {!isFirstStep && (
-            <button
+            <Button
               type='button'
               onClick={(e: React.MouseEvent<HTMLButtonElement>) => changeStep(currentStep - 1, e)}
             >
               Voltar
-            </button>
+            </Button>
           )}
 
           {!isLastStep ? (
-            <button type='submit'>
+            <Button type='submit'>
               Avançar
-            </button>
+            </Button>
           ) : (
-            <button 
+            <Button
               type='submit'
               onClick={handleRegister}
             >
               Enviar
-            </button>
+            </Button>
           )}
         </ButtonForm>
       </form>

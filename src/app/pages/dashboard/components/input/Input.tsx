@@ -1,16 +1,16 @@
+import { ReactNode } from 'react';
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornmentEnd from '@mui/material/InputAdornment';
 import styled from 'styled-components';
-import { ReactNode } from 'react';
 
 interface IInputRegisterProps{
-    label: string;
+    label?: string;
     value: string;
     placeholder?: string;
-    icon: ReactNode;
+    icon?: ReactNode;
     onChange: (newvalue: string) => void;
-}
+};
 
 const SLabel = styled.span `
     color: var(--neutral-800);

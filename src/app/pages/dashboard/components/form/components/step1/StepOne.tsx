@@ -1,8 +1,12 @@
-import styled from "styled-components";
 import { Input } from "../../../input/Input";
 import { Titles } from "../../../titles/Titles";
 
+import {styled} from "styled-components";
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
+import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
+import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
+
 
 const SStepOne = styled.div `
     display: flex;
@@ -10,7 +14,6 @@ const SStepOne = styled.div `
     justify-content: center;
     gap: 1rem;
 `
-
 export const StepOne = (props: {
     name: string,
     email: string,
@@ -37,7 +40,7 @@ export const StepOne = (props: {
                     label="Email"
                     placeholder="davi.santos@gmail.com"
                     value={props.email}
-                    icon= {<PersonOutlineOutlinedIcon />}
+                    icon= {<MailOutlineOutlinedIcon />}
                     onChange={props.onEmailChange}
                 />
 
@@ -45,7 +48,7 @@ export const StepOne = (props: {
                     label="Telefone"
                     placeholder="11909090909"
                     value={props.phone.toString()}
-                    icon= {<PersonOutlineOutlinedIcon />}
+                    icon= {<PhoneAndroidOutlinedIcon />}
                     onChange={props.onPhoneChange}     
                 />
 
@@ -53,7 +56,7 @@ export const StepOne = (props: {
                     label="Empresa"
                     placeholder="Small Tech"
                     value={props.company}
-                    icon= {<PersonOutlineOutlinedIcon />}
+                    icon= {<BusinessOutlinedIcon />}
                     onChange={props.onCompanyChange}
                 />
             </SStepOne>

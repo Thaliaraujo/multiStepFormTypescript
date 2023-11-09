@@ -5,18 +5,17 @@ import { ApiException } from "../../../../shared/services/api/ApiException";
 import { Input } from "../input/Input";
 import { Logo } from "../logo/Logo";
 import { Paragraphs } from "../paragraphs/Paragraphs";
+import { Button } from "../button/StylesButton";
 
 import styled from "styled-components";
-
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 
 const SFooter = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1.5rem;
     border-top: 1px solid var(--neutral-400);
 `
@@ -24,7 +23,7 @@ const SFooter = styled.div`
 const SContent = styled.div`
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     gap: .5rem;
 `
 
@@ -34,7 +33,6 @@ export const Footer = () => {
     const [email, setEmail] = useState('');
 
     const thanks = "Obrigado por se inscrever na nossa newsletter! Estamos muito felizes em ter você como parte da nossa comunidade. 😊"
-
 
     const handleSubscription = () => {
         
@@ -63,19 +61,21 @@ export const Footer = () => {
     };
 
     return(
-        <SFooter>
-            <Input
-                label= ""
-                placeholder="Digite seu e-mail"
-                value= {email}
-                icon= {<PersonOutlineOutlinedIcon />}
-                onChange={newValue => setEmail(newValue)}
-            />
-            <button type="button" onClick={handleSubscription}>Inscreva-se</button>
+        <>
+            <SFooter>
+                <Input
+                    placeholder="Digite seu e-mail"
+                    value= {email}
+                    icon= {<MailOutlineOutlinedIcon />}
+                    onChange={newValue => setEmail(newValue)}
+                />
+                <Button type="button" onClick={handleSubscription}>Inscreva-se</Button>
+            </SFooter>
             <SContent>
                 <Logo />
                 <Paragraphs>Desenvolvido por Thalía Araújo</Paragraphs>
             </SContent>
-        </SFooter>
+        </>
+        
     );
 };
