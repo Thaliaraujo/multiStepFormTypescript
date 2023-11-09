@@ -8,6 +8,9 @@ import { Paragraphs } from "../paragraphs/Paragraphs";
 
 import styled from "styled-components";
 
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+
+
 
 const SFooter = styled.div`
     display: flex;
@@ -65,6 +68,7 @@ export const Footer = () => {
                 label= ""
                 placeholder="Digite seu e-mail"
                 value= {email}
+                icon= {<PersonOutlineOutlinedIcon />}
                 onChange={newValue => setEmail(newValue)}
             />
             <button type="button" onClick={handleSubscription}>Inscreva-se</button>

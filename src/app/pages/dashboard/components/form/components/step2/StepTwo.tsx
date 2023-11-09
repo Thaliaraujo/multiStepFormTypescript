@@ -1,6 +1,7 @@
 import { Input } from "../../../input/Input";
 import { Paragraphs } from "../../../paragraphs/Paragraphs";
 import { Titles } from "../../../titles/Titles";
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 export const StepTwo = (props: {
     teste: string,
@@ -14,6 +15,7 @@ export const StepTwo = (props: {
                 label= "test"
                 placeholder="tets"
                 value={props.teste}
+                icon= {<PersonOutlineOutlinedIcon />}
                 onChange={props.onTesteChange}
             />
         </div>

@@ -1,5 +1,15 @@
+import styled from "styled-components";
 import { Input } from "../../../input/Input";
 import { Titles } from "../../../titles/Titles";
+
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+
+const SStepOne = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+`
 
 export const StepOne = (props: {
     name: string,
@@ -14,11 +24,12 @@ export const StepOne = (props: {
     return (
         <>
             <Titles>Dados de Contato</Titles>
-            <div>
+            <SStepOne>
                 <Input
                     label="Nome"
                     placeholder="Davi Santos"
                     value={props.name}
+                    icon= {<PersonOutlineOutlinedIcon />}
                     onChange={props.onNameChange}
                 />
 
@@ -26,6 +37,7 @@ export const StepOne = (props: {
                     label="Email"
                     placeholder="davi.santos@gmail.com"
                     value={props.email}
+                    icon= {<PersonOutlineOutlinedIcon />}
                     onChange={props.onEmailChange}
                 />
 
@@ -33,6 +45,7 @@ export const StepOne = (props: {
                     label="Telefone"
                     placeholder="11909090909"
                     value={props.phone.toString()}
+                    icon= {<PersonOutlineOutlinedIcon />}
                     onChange={props.onPhoneChange}     
                 />
 
@@ -40,9 +53,10 @@ export const StepOne = (props: {
                     label="Empresa"
                     placeholder="Small Tech"
                     value={props.company}
+                    icon= {<PersonOutlineOutlinedIcon />}
                     onChange={props.onCompanyChange}
                 />
-            </div>
+            </SStepOne>
         </>
     );
 };
