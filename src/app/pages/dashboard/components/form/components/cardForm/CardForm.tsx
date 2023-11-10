@@ -1,10 +1,43 @@
-import { ReactNode, useState } from 'react';
-
+import { useState } from 'react';
+import styled from 'styled-components';
 
 interface ICardProps{
     label: string;
-    icon?: ReactNode;
+    icon?: any; 
 };
+
+interface SCardProps {
+    active: boolean;
+}
+
+
+const SCard = styled.div<SCardProps>`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 15rem;
+    height: 7rem;
+
+    border-radius: 1rem;
+    background: var(--neutral-100);
+    box-shadow: 0px 4px 10px 0px rgba(31, 37, 89, 0.07), 0px 2px 11px 0px rgba(69, 65, 164, 0.06);
+
+    >h3 {
+        color: var(--neutral-800);
+        font-size: .8rem;
+        font-weight: 500;
+        line-height: 1.25rem; 
+        text-align: center;
+    }
+
+    ${(props) =>
+    props.active &&
+    `
+        border: 2px solid var(--primary-color);
+    `
+    }
+`
 
 export const CardForm: React.FC<ICardProps> = (props) => {
 
@@ -17,11 +50,9 @@ export const CardForm: React.FC<ICardProps> = (props) => {
     };
 
     return(
-        <>
-            <div onClick={() => toggleCardActive(0)}>
-                {props.icon}
-                <h3> {props.label} </h3>
-            </div>
-        </>
+        <SCard active={card[0]} onClick={() => toggleCardActive(0)}>
+            <img src={props.icon} alt= {props.label}/>
+            <h3> {props.label} </h3>
+        </SCard>
     );
 };
