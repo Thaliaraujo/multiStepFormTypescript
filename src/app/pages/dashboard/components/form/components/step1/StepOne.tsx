@@ -30,15 +30,15 @@ export const StepOne = (props: {
             <SStepOne>
                 <Input
                     label="Nome"
-                    placeholder="Davi Santos"
+                    placeholder="Seu nome"
                     value={props.name}
                     icon= {<PersonOutlineOutlinedIcon />}
                     onChange={props.onNameChange}
                 />
 
                 <Input
-                    label="Email"
-                    placeholder="davi.santos@gmail.com"
+                    label="E-mail"
+                    placeholder="Endereço de e-mail"
                     value={props.email}
                     icon= {<MailOutlineOutlinedIcon />}
                     onChange={props.onEmailChange}
@@ -46,7 +46,7 @@ export const StepOne = (props: {
 
                 <Input
                     label="Telefone"
-                    placeholder="11909090909"
+                    placeholder="(11) 9090-90909"
                     value={props.phone.toString()}
                     icon= {<PhoneAndroidOutlinedIcon />}
                     onChange={props.onPhoneChange}     
@@ -54,7 +54,7 @@ export const StepOne = (props: {
 
                 <Input
                     label="Empresa"
-                    placeholder="Small Tech"
+                    placeholder="Nome da empresa"
                     value={props.company}
                     icon= {<BusinessOutlinedIcon />}
                     onChange={props.onCompanyChange}
