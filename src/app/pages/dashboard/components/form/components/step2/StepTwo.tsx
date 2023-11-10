@@ -24,8 +24,14 @@ const SCards = styled.div `
 `
 
 export const StepTwo = (props: {
-    teste: string,
-    onTesteChange: (value: string) => void,
+    development: string,
+    design: string,
+    marketing: string,
+    other: string,
+    onDevelopmentChange: (value: string) => void,
+    onDesignChange: (value: string) => void,
+    onMarketingChange: (value: string) => void,
+    onOtherChange: (value: string) => void,
 }) => {
     return(
         <SStepTwo>
@@ -36,21 +42,24 @@ export const StepTwo = (props: {
                 <CardForm 
                     icon= {(developer)}
                     label="Desenvolvimento"
+                    onChange={props.onDevelopmentChange}
                 />
                 <CardForm 
                     icon= {(design)}
                     label="Web Design"
+                    onChange={props.onDesignChange}
                 />
                 <CardForm 
                     icon= {(marketing)}
                     label="Marketing"
+                    onChange={props.onMarketingChange}
                 />
                 <CardForm 
                     icon= {(setting)}
                     label="Outro"
+                    onChange={props.onOtherChange}
                 />
             </SCards>
-            
         </SStepTwo>
     );
 };

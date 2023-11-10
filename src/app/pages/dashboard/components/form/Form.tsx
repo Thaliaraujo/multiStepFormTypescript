@@ -18,7 +18,10 @@ export const Form = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
-  const [teste, setTeste] = useState('');
+  const [development, setDevelopment] = useState('');
+  const [design, setDesign] = useState('');
+  const [marketing, setMarketing] = useState('');
+  const [other, setOther] = useState('');
 
   const formComponents = [
     <StepOne 
@@ -32,8 +35,14 @@ export const Form = () => {
       onCompanyChange={setCompany}
     />,
     <StepTwo 
-      teste={teste}
-      onTesteChange={setTeste}
+      development={development}
+      design={design}
+      marketing={marketing}
+      other={other}
+      onDevelopmentChange={setDevelopment}
+      onDesignChange={setDesign}
+      onMarketingChange={setMarketing}
+      onOtherChange={setOther}
     />,
     <StepThree />,
     <StepFour />
@@ -49,7 +58,10 @@ export const Form = () => {
       email: email,
       phone: parseFloat(phone),
       company: company,
-      teste: teste
+      development: development,
+      design: design,
+      marketing: marketing,
+      other: other,
     };
 
     // Chama o serviço para criar um novo registro
@@ -63,7 +75,10 @@ export const Form = () => {
         setEmail('');
         setPhone('');
         setCompany('');
-        setTeste('');
+        setDevelopment('');
+        setDesign('');
+        setMarketing('');
+        setOther('');
       };
     });
   };

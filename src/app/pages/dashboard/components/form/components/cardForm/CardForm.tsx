@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 interface ICardProps{
     label: string;
-    icon?: any; 
+    icon?: any;
+    onChange: (newvalue: string) => void; 
 };
 
-interface SCardProps {
-    active: boolean;
-}
+// interface SCardProps {
+//     active: boolean;
+// }
 
-
-const SCard = styled.div<SCardProps>`
+const SCard = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -31,11 +31,8 @@ const SCard = styled.div<SCardProps>`
         text-align: center;
     }
 
-    ${(props) =>
-    props.active &&
-    `
+    &:active {
         border: 2px solid var(--primary-color);
-    `
     }
 `
 
@@ -45,12 +42,13 @@ export const CardForm: React.FC<ICardProps> = (props) => {
 
     const toggleCardActive = (index: any) => {
         const newCard = [...card];
+
         newCard[index] = !newCard[index];
-        setCard(newCard);
+        setCard(newCard)
     };
 
     return(
-        <SCard active={card[0]} onClick={() => toggleCardActive(0)}>
+        <SCard onClick={() => toggleCardActive(0)}>
             <img src={props.icon} alt= {props.label}/>
             <h3> {props.label} </h3>
         </SCard>
