@@ -9,7 +9,14 @@ import { Button } from "../button/StylesButton";
 
 import styled from "styled-components";
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
+import Alert from '@mui/material/Alert';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
+
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import CloseIcon from '@mui/icons-material/Close';
 
 const SFooter = styled.div`
     display: flex;
@@ -31,9 +38,37 @@ export const Footer = () => {
 
     const [subscription, setSubscription] = useState<ISubscription[]>([]);
     const [email, setEmail] = useState('');
+    const [open, setOpen] = useState(false);
+    
+    const AlertThanks = () => {
+        return (
+            <Box sx={{ width: '50%' }}>
+            <Collapse in={open}>
+                <Alert
+                action={
+                    <IconButton
+                    aria-label="close"
+                    color="inherit"
+                    size="small"
+                    onClick={() => {
+                        setOpen(false);
+                    }}
+                    >
+                    <CloseIcon fontSize="small" />
+                    </IconButton>
+                }
+                sx={{ mb: 2 }}
+                iconMapping={{
+                    success: <CheckCircleOutlineIcon fontSize="small" />,
+                  }}
+                >
+                    Obrigado por se inscrever na nossa newsletter! Estamos muito felizes em ter você como parte da nossa comunidade. 😊
+                </Alert>
+            </Collapse>
+            </Box>
+        );
+    };
 
-    const thanks = "Obrigado por se inscrever na nossa newsletter! Estamos muito felizes em ter você como parte da nossa comunidade. 😊"
-   
     const handleSubscription = () => {
         
         if (email.trim() === '') {
@@ -55,7 +90,7 @@ export const Footer = () => {
             setSubscription((oldSubscription) => [...oldSubscription, result[0]]);
             // Limpa o campo após o cadastro
             setEmail('');
-            alert(thanks);
+            setOpen(true);
         }
         });
     };
@@ -70,6 +105,7 @@ export const Footer = () => {
                     onChange={newValue => setEmail(newValue)}
                 />
                 <Button type="button" onClick={handleSubscription}>Inscreva-se</Button>
+                {open && <AlertThanks />}
             </SFooter>
             <SContent>
                 <Logo />

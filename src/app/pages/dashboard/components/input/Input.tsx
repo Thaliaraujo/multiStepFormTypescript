@@ -30,10 +30,11 @@ export const Input: React.FC<IInputRegisterProps> = (props) => {
                 onChange={e => props.onChange(e.target.value)}
                 sx={[
                     {
-                    fontSize: '.7rem'
+                    fontSize: '.7rem',
+                    padding: '0 1rem'
                     }
                 ]}
-                size="small"
+                size= 'small'
                 endAdornment={
                     <InputAdornmentEnd position="end">
                         {props.icon}

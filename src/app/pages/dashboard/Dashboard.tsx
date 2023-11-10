@@ -7,13 +7,13 @@ import { TitleAndParagraph } from './components/tiltleAndParagraph/TitleAndParag
 
 export const Dashboard = () => {
     return(
-        <div>
+        <>
             <Logo />
             <TitleAndParagraph />
             <div className='formDashboard'>
                 <Form />
             </div>
             <Footer />
-        </div>
+        </>
     );
 };

@@ -8,7 +8,7 @@ import { StepOne } from "./components/step1/StepOne";
 import { StepTwo } from "./components/step2/StepTwo";
 import { StepThree } from "./components/step3/StepThree";
 import { StepFour } from "./components/step4/StepFour";
-import { ButtonForm, SForm } from "./StylesForm";
+import { ButtonForm, SForm } from "./FormStyles";
 import { Button } from "../button/StylesButton";
 
 export const Form = () => {
