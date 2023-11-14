@@ -18,11 +18,8 @@ export const Form = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
-  const [development, setDevelopment] = useState('');
-  const [design, setDesign] = useState('');
-  const [marketing, setMarketing] = useState('');
-  const [other, setOther] = useState('');
-
+  const [service, setService] = useState('');
+  
   const formComponents = [
     <StepOne 
       name={name}
@@ -35,14 +32,9 @@ export const Form = () => {
       onCompanyChange={setCompany}
     />,
     <StepTwo 
-      development={development}
-      design={design}
-      marketing={marketing}
-      other={other}
-      onDevelopmentChange={setDevelopment}
-      onDesignChange={setDesign}
-      onMarketingChange={setMarketing}
-      onOtherChange={setOther}
+      service={service}
+      onServiceChange={setService}
+
     />,
     <StepThree />,
     <StepFour />
@@ -58,10 +50,7 @@ export const Form = () => {
       email: email,
       phone: parseFloat(phone),
       company: company,
-      development: development,
-      design: design,
-      marketing: marketing,
-      other: other,
+      service: service,
     };
 
     // Chama o serviço para criar um novo registro
@@ -75,10 +64,7 @@ export const Form = () => {
         setEmail('');
         setPhone('');
         setCompany('');
-        setDevelopment('');
-        setDesign('');
-        setMarketing('');
-        setOther('');
+        setService('');
       };
     });
   };

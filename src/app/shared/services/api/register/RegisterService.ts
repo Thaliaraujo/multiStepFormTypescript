@@ -7,10 +7,7 @@ export interface IRegister {
     email: string;
     phone: number;
     company: string;
-    development: string;
-    design: string;
-    marketing: string;
-    other: string;
+    service: string;
 };
 
 const getAll = async (): Promise<IRegister[] | ApiException> => {

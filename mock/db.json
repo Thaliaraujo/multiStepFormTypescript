@@ -6,27 +6,12 @@
       "phone": 11963950231,
       "company": "MS Nobreak",
       "id": 1
-    },
-    {
-      "name": "gf",
-      "email": "gf",
-      "phone": null,
-      "company": "fggf",
-      "development": "",
-      "design": "",
-      "marketing": "",
-      "other": "",
-      "id": 2
     }
   ],
   "subscription": [
     {
       "email": "thalia.araujo@",
       "id": 1
-    },
-    {
-      "email": "thsdhdv",
-      "id": 2
     }
   ]
 }
