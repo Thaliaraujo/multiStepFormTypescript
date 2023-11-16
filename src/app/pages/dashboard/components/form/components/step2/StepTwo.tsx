@@ -27,6 +27,10 @@ export const StepTwo = (props: {
     service: string,
     onServiceChange: (value: string) => void,
 }) => {
+    const handleServiceChange = (selectedService: string) => {
+        props.onServiceChange(selectedService);
+    };
+
     return(
         <SStepTwo>
             <Titles>Nossos serviços</Titles>
@@ -36,26 +40,22 @@ export const StepTwo = (props: {
                 <CardForm 
                     icon= {(developer)}
                     label="Desenvolvimento"
-                    // onChange={props.onServiceChange}
-                    onChange={() => props.onServiceChange('desenvolvimento')}
+                    onClick={() => handleServiceChange("Desenvolvimento")}
                 />
                 <CardForm 
                     icon= {(design)}
                     label="Web Design"
-                    onChange={() => props.onServiceChange('web design')}
-                    // onChange={props.onServiceChange}
+                    onClick={() => handleServiceChange("Web Design")}
                 />
                 <CardForm 
                     icon= {(marketing)}
                     label="Marketing"
-                    onChange={() => props.onServiceChange('marketing')}
-                    // onChange={props.onServiceChange}
+                    onClick={() => handleServiceChange("Marketing")}
                 />
                 <CardForm 
                     icon= {(setting)}
                     label="Outro"
-                    onChange={() => props.onServiceChange('outro')}
-                    // onChange={props.onServiceChange}
+                    onClick={() => handleServiceChange("Outro")}
                 />
             </SCards>
         </SStepTwo>

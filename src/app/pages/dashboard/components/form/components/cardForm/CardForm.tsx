@@ -1,16 +1,10 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 interface ICardProps{
     label: string;
     icon?: any;
-    onChange: (newvalue: string) => void; 
 };
 
-
-// interface SCardProps {
-//     active: boolean;
-// }
 
 const SCard = styled.div`
     display: flex;
@@ -37,22 +31,12 @@ const SCard = styled.div`
     }
 `
 
-export const CardForm: React.FC<ICardProps> = (props) => {
-
-    // const [card, setCard] = useState([false, false, false, false]);
-
-    // const toggleCardActive = (index: any) => {
-    //     const newCard = [...card];
-
-    //     newCard[index] = !newCard[index];
-    //     setCard(newCard)
-    // };
+export const CardForm: React.FC<ICardProps & { onClick: () => void }> = (props) => {
 
     return(
-        <SCard onClick={() => onchange}>
+        <SCard onClick={props.onClick}>
             <img src={props.icon} alt= {props.label}/>
-            <h3> {props.label} </h3>
+            <h3>{props.label}</h3>
         </SCard>
     );
 };
-
