@@ -19,6 +19,8 @@ export const Form = () => {
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
   const [service, setService] = useState('');
+  const [price, setPrice] = useState('');
+
   
   const formComponents = [
     <StepOne 
@@ -34,9 +36,11 @@ export const Form = () => {
     <StepTwo 
       service={service}
       onServiceChange={setService}
-
     />,
-    <StepThree />,
+    <StepThree 
+      price={price}
+      onPriceChange={setPrice}
+    />,
     <StepFour />
   ];
 
@@ -51,6 +55,7 @@ export const Form = () => {
       phone: parseFloat(phone),
       company: company,
       service: service,
+      price: price,
     };
 
     // Chama o serviço para criar um novo registro
@@ -65,6 +70,7 @@ export const Form = () => {
         setPhone('');
         setCompany('');
         setService('');
+        setPrice('');
       };
     });
   };

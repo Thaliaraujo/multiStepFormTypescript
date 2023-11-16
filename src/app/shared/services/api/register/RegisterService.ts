@@ -8,6 +8,7 @@ export interface IRegister {
     phone: number;
     company: string;
     service: string;
+    price: string;
 };
 
 const getAll = async (): Promise<IRegister[] | ApiException> => {

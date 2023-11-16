@@ -1,17 +1,11 @@
 import React from 'react';
 import {useState} from 'react';
 import styled from 'styled-components';
+
 interface ICardProps{
     label: string;
     icon?: any;
 };
-
-// Utilizando shouldForwardProp
-const ForwardingSCard = React.forwardRef<HTMLDivElement, { isActive: boolean }>(({ isActive, ...props }, ref) => (
-    <SCard ref={ref} isActive={isActive} {...props} />
-));
-
-export { ForwardingSCard as SCard };
 
 const SCard = styled.div<{ isActive: boolean }>`
     display: flex;
@@ -50,3 +44,4 @@ export const CardForm: React.FC<ICardProps & { onClick: () => void }> = (props) 
         </SCard>
     );
 };
+
