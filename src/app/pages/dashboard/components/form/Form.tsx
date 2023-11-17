@@ -18,7 +18,7 @@ export const Form = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
-  const [service, setService] = useState('');
+  const [service, setService] = useState(['']);
   const [price, setPrice] = useState('');
 
   
@@ -69,7 +69,7 @@ export const Form = () => {
         setEmail('');
         setPhone('');
         setCompany('');
-        setService('');
+        setService(['']);
         setPrice('');
       };
     });

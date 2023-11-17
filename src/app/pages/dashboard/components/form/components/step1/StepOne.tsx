@@ -37,6 +37,7 @@ export const StepOne = (props: {
                 />
 
                 <Input
+                    type= "email"
                     label="E-mail"
                     placeholder="Endereço de e-mail"
                     value={props.email}
@@ -45,6 +46,7 @@ export const StepOne = (props: {
                 />
 
                 <Input
+                    type= "number"
                     label="Telefone"
                     placeholder="(11) 9090-90909"
                     value={props.phone.toString()}

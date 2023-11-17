@@ -24,10 +24,10 @@ const SCards = styled.div `
 `
 
 export const StepTwo = (props: {
-    service: string,
-    onServiceChange: (value: string) => void,
+    service: string[],
+    onServiceChange: (value: string[]) => void,
 }) => {
-    const handleServiceChange = (selectedService: string) => {
+    const handleServiceChange = (selectedService: string[]) => {
         props.onServiceChange(selectedService);
     };
 
@@ -40,22 +40,22 @@ export const StepTwo = (props: {
                 <CardForm 
                     icon= {(developer)}
                     label="Desenvolvimento"
-                    onClick={() => handleServiceChange("Desenvolvimento")}
+                    onClick={() => handleServiceChange(["Desenvolvimento"])}
                 />
                 <CardForm 
                     icon= {(design)}
                     label="Web Design"
-                    onClick={() => handleServiceChange("Web Design")}
+                    onClick={() => handleServiceChange(["Web Design"])}
                 />
                 <CardForm 
                     icon= {(marketing)}
                     label="Marketing"
-                    onClick={() => handleServiceChange("Marketing")}
+                    onClick={() => handleServiceChange(["Marketing"])}
                 />
                 <CardForm 
                     icon= {(setting)}
                     label="Outro"
-                    onClick={() => handleServiceChange("Outro")}
+                    onClick={() => handleServiceChange(["Outro"])}
                 />
             </SCards>
         </SStepTwo>

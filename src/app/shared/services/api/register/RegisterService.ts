@@ -7,7 +7,7 @@ export interface IRegister {
     email: string;
     phone: number;
     company: string;
-    service: string;
+    service: string[];
     price: string;
 };
 

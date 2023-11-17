@@ -5,6 +5,7 @@ import InputAdornmentEnd from '@mui/material/InputAdornment';
 import styled from 'styled-components';
 
 interface IInputRegisterProps{
+    type?: any;
     label?: string;
     value: string;
     placeholder?: string;
@@ -25,6 +26,7 @@ export const Input: React.FC<IInputRegisterProps> = (props) => {
             <SLabel>{props.label}</SLabel>
             <OutlinedInput 
                 required
+                type={props.type}
                 value={props.value}
                 placeholder={props.placeholder}
                 onChange={e => props.onChange(e.target.value)}
