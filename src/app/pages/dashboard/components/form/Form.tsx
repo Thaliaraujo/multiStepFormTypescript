@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { UseForm } from "../../../../shared/hooks/UseForm";
 import { IRegister, RegisterService } from "../../../../shared/services/api/register/RegisterService";
 import { ApiException } from "../../../../shared/services/api/ApiException";
@@ -8,6 +9,8 @@ import { StepOne } from "./components/step1/StepOne";
 import { StepTwo } from "./components/step2/StepTwo";
 import { StepThree } from "./components/step3/StepThree";
 import { StepFour } from "./components/step4/StepFour";
+
+
 import { ButtonForm, SForm } from "./FormStyles";
 import { Button } from "../button/StylesButton";
 

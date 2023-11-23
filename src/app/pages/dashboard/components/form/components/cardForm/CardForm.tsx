@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+
 import styled from 'styled-components';
 
 interface ICardProps{
@@ -12,8 +13,8 @@ const SCard = styled.div<{ isActive: boolean }>`
     justify-content: space-evenly;
     align-items: center;
 
-    width: 15rem;
-    height: 7rem;
+    width: 12rem;
+    height: 5rem;
 
     border-radius: 1rem;
     background: var(--neutral-100);
