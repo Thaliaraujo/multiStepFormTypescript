@@ -65,9 +65,11 @@ export const StepThree = (props: {
                                 display: 'flex',
                                 justifyContent: 'space-evenly',
                                 alignItems: 'center',
-                                width: '12rem',
-                                height: '5rem',
+
+                                width: '15rem',
+                                height: '7rem',
                                 borderRadius: '1rem',
+
                                 backgroundColor: '##FFFFFF',
                                 boxShadow: '0px 4px 10px 0px rgba(31, 37, 89, 0.07), 0px 2px 11px 0px rgba(69, 65, 164, 0.06)',
                             }}
@@ -100,9 +102,11 @@ export const StepThree = (props: {
                                 display: 'flex',
                                 justifyContent: 'space-evenly',
                                 alignItems: 'center',
-                                width: '12rem',
-                                height: '5rem',
+
+                                width: '15rem',
+                                height: '7rem',
                                 borderRadius: '1rem',
+
                                 backgroundColor: '##FFFFFF',
                                 boxShadow: '0px 4px 10px 0px rgba(31, 37, 89, 0.07), 0px 2px 11px 0px rgba(69, 65, 164, 0.06)',
                             }}
@@ -134,9 +138,11 @@ export const StepThree = (props: {
                                 display: 'flex',
                                 justifyContent: 'space-evenly',
                                 alignItems: 'center',
-                                width: '12rem',
-                                height: '5rem',
+
+                                width: '15rem',
+                                height: '7rem',
                                 borderRadius: '1rem',
+
                                 backgroundColor: '##FFFFFF',
                                 boxShadow: '0px 4px 10px 0px rgba(31, 37, 89, 0.07), 0px 2px 11px 0px rgba(69, 65, 164, 0.06)',
                             }}
@@ -168,9 +174,11 @@ export const StepThree = (props: {
                                 display: 'flex',
                                 justifyContent: 'space-evenly',
                                 alignItems: 'center',
-                                width: '12rem',
-                                height: '5rem',
+
+                                width: '15rem',
+                                height: '7rem',
                                 borderRadius: '1rem',
+                                
                                 backgroundColor: '##FFFFFF',
                                 boxShadow: '0px 4px 10px 0px rgba(31, 37, 89, 0.07), 0px 2px 11px 0px rgba(69, 65, 164, 0.06)',
                             }}

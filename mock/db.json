@@ -8,22 +8,13 @@
       "id": 1
     },
     {
-      "name": "cdf",
+      "name": "Thalía",
       "email": "thalia.araujo321@gmail.com",
-      "phone": 858,
-      "company": "hgy",
-      "service": "",
+      "phone": 11963950231,
+      "company": "Solar",
+      "service": "design",
       "price": "R$10.000 - R$20.000",
-      "id": 2
-    },
-    {
-      "name": "",
-      "email": "",
-      "phone": null,
-      "company": "",
-      "service": "",
-      "price": "",
-      "id": 3
+      "id": 8
     }
   ],
   "subscription": [
