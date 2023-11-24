@@ -10,10 +10,13 @@ import { StepOne } from "./components/step1/StepOne";
 import { StepTwo } from "./components/step2/StepTwo";
 import { StepThree } from "./components/step3/StepThree";
 import { StepFour } from "./components/step4/StepFour";
+import { Titles } from "../titles/Titles";
+import { Paragraphs } from "../paragraphs/Paragraphs";
 
 import { ButtonForm, SForm } from "./FormStyles";
 import { Button } from "../button/StylesButton";
-import { Dialog, DialogActions, DialogContent, Typography } from "@mui/material";
+import { Dialog, DialogActions, DialogContent,  IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 export const Form = () => {
@@ -70,36 +73,42 @@ export const Form = () => {
           <DialogContent
             sx={{
               display: 'flex',
+              flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              padding: '100px'
+
+              padding: '50px',
+              gap:'2rem'
             }}
           >
-          <Typography>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </Typography>
-          </DialogContent>
-          
-          <DialogContent
+            <Titles>
+              Cotação Enviada
+            </Titles>
+
+            <IconButton
+            aria-label="close"
+            onClick={handleClose}
             sx={{
-              display: 'flex',
-              justifyContent: 'space-around',
-              alignItems: 'center'
+              position: 'absolute',
+              right: 8,
+              top: 8,
             }}
           >
+            <CloseIcon />
+            </IconButton>
+
+            <Paragraphs>
+              Obrigado por solicitar uma cotação conosco. Estamos felizes em atendê-lo e oferecer as melhores condições para o 
+              seu negócio. Em breve, entraremos em contato com você para confirmar os detalhes da sua cotação e esclarecer 
+              qualquer dúvida que você possa ter. Agradecemos a sua preferência e confiança ✨
+            </Paragraphs>
+            
             <DialogActions>
             <Button autoFocus onClick={handleHome}>
-              Nova Cotação
+              Solicitar nova Cotação
             </Button>
             </DialogActions>
 
-            <DialogActions>
-            <Button autoFocus onClick={handleClose}>
-              Fechar
-            </Button>
-            </DialogActions>
           </DialogContent>
         </Dialog>
       </React.Fragment>
