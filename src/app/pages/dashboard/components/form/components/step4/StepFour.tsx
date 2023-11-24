@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { Paragraphs } from "../../../paragraphs/Paragraphs";
 import { Titles } from "../../../titles/Titles";
 import check from "./imagesStepFour/check.svg"

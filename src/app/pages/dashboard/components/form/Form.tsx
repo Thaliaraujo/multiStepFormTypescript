@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 
 import { UseForm } from "../../../../shared/hooks/UseForm";
 import { IRegister, RegisterService } from "../../../../shared/services/api/register/RegisterService";
@@ -10,9 +11,10 @@ import { StepTwo } from "./components/step2/StepTwo";
 import { StepThree } from "./components/step3/StepThree";
 import { StepFour } from "./components/step4/StepFour";
 
-
 import { ButtonForm, SForm } from "./FormStyles";
 import { Button } from "../button/StylesButton";
+import { Dialog, DialogActions, DialogContent, Typography } from "@mui/material";
+
 
 export const Form = () => {
   
@@ -23,7 +25,7 @@ export const Form = () => {
   const [company, setCompany] = useState('');
   const [service, setService] = useState('');
   const [price, setPrice] = useState('');
-
+  const [open, setOpen] = useState(false);
   
   const formComponents = [
     <StepOne 
@@ -46,6 +48,63 @@ export const Form = () => {
     />,
     <StepFour />
   ];
+
+  const AlertSubmit = () => {
+    
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+    const handleHome = (e: any) => {
+      e.preventDefault();
+      setOpen(false);
+      changeStep(currentStep - 3, e);
+    }
+    
+    return(
+      <React.Fragment>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+        >
+          <DialogContent
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '100px'
+            }}
+          >
+          <Typography>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+            consectetur ac, vestibulum at eros.
+          </Typography>
+          </DialogContent>
+          
+          <DialogContent
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-around',
+              alignItems: 'center'
+            }}
+          >
+            <DialogActions>
+            <Button autoFocus onClick={handleHome}>
+              Nova Cotação
+            </Button>
+            </DialogActions>
+
+            <DialogActions>
+            <Button autoFocus onClick={handleClose}>
+              Fechar
+            </Button>
+            </DialogActions>
+          </DialogContent>
+        </Dialog>
+      </React.Fragment>
+    );
+  };
 
   const {currentStep, currentComponents, changeStep, isFirstStep, isLastStep} = UseForm(formComponents);
   
@@ -74,6 +133,7 @@ export const Form = () => {
         setCompany('');
         setService('');
         setPrice('');
+        setOpen(true);
       };
     });
   };
@@ -105,6 +165,7 @@ export const Form = () => {
               Enviar
             </Button>
           )}
+          {open && <AlertSubmit />}
         </ButtonForm>
       </form>
     </SForm>
