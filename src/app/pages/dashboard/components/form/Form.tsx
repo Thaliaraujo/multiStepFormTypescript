@@ -119,7 +119,7 @@ export const Form = () => {
   
   const handleRegister = () => {
     
-    //criando um objeto para enviar dados para RegisterService
+    // criando um objeto para enviar dados para RegisterService
     const dataToCreate: Omit<IRegister, 'id'> = {
       name: name,
       email: email,

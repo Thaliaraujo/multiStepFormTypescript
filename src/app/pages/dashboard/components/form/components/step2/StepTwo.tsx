@@ -41,7 +41,7 @@ export const StepTwo = (props: {
             >
                 <FormControlLabel 
                     value="desenvolvimento"
-                    onClick={() => handleServiceChange("desenvolvimento")} 
+                    onClick={() => handleServiceChange("desenvolvimento")}
                     control={
                         <Radio
                             sx={{
@@ -81,9 +81,9 @@ export const StepTwo = (props: {
                     }}
                 />
 
-                <FormControlLabel 
+                 <FormControlLabel 
                     value="design"
-                    onClick={() => handleServiceChange("design")} 
+                    onClick={() => handleServiceChange("design")}
                     control={
                         <Radio
                             sx={{
@@ -123,7 +123,7 @@ export const StepTwo = (props: {
                     }}
                 />
 
-                <FormControlLabel 
+               <FormControlLabel 
                     value="marketing"
                     onClick={() => handleServiceChange("marketing")} 
                     control={
@@ -205,7 +205,7 @@ export const StepTwo = (props: {
 
                         boxShadow: '0px 4px 10px 0px rgba(31, 37, 89, 0.07), 0px 2px 11px 0px rgba(69, 65, 164, 0.06)',
                     }}
-                />
+                /> 
             </RadioGroup> 
         </SStepTwo>
     );

@@ -1,10 +1,12 @@
 {
   "register": [
     {
-      "name": "Thalía",
-      "email": "thalia.@gmail.com",
-      "phone": 11955151,
+      "name": "Lia",
+      "email": "lia@lia",
+      "phone": 119145251552,
       "company": "Web Delas",
+      "service": "outro",
+      "price": "R$50.000 +",
       "id": 1
     }
   ],
