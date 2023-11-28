@@ -2,6 +2,8 @@
 
 #### Este projeto é um formulário de cotação em múltiplas etapas construído utilizando React, TypeScript, Material-UI, styled-components, Axios e react-router-dom. O formulário foi projetado para orientar os usuários por meio de um processo passo a passo para fornecer informações para uma solicitação de cotação.
 
+#### Acesse: https://multi-step-form-bice-ten.vercel.app/dashboard 
+
 ## Recursos
 
 #### Formulário em Múltiplas Etapas: O formulário de cotação é dividido em quatro etapas para simplificar o processo de entrada do usuário;
